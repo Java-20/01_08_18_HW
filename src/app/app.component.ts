@@ -6,5 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  contacts: Contact[] = [];
+  contact:Contact = null;
+
+  addContact(contact: Contact):void {
+    this.contacts.push(contact);
+  }
+
+  setCurrent(contact: Contact) {
+    this.contact = contact;
+  }
+}
+type Contact = {
+  name:string,
+  email:string,
+  phone: string,
+  desc: string
 }

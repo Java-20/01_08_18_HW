@@ -1,0 +1,8 @@
+
+<h3 *ngIf="current === null; else contactInfo">Contact info</h3>
+<ng-template #contactInfo>
+<h3>{{current.name}}</h3>
+<p>{{current.email}}</p>
+<p>{{current.phone}}</p>
+<p>{{current.desc}}</p>
+</ng-template>
